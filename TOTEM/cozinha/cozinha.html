@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel da Cozinha - ChefeCompare</title>
+    <link rel="stylesheet" href="cozinha-style.css">
+</head>
+<body>
+
+    <header>
+        <div>
+            <h1>Painel de Preparação (Cozinha)</h1>
+            <p class="subtitulo-header">Atualizações automáticas ativas</p>
+        </div>
+        <div class="status-indicator">Banco Ativo</div>
+    </header>
+
+    <div class="painel-container">
+        
+        <section class="coluna">
+            <h2 class="coluna-titulo">
+                Fila de Preparação (Pendentes)
+                <span class="badge" id="countPendentes">0</span>
+            </h2>
+            <div class="grid-pedidos" id="gridPendentes">
+                <div class="sem-pedidos">Buscando novos pedidos...</div>
+            </div>
+        </section>
+
+        <section class="coluna concluidos">
+            <h2 class="coluna-titulo">
+                Prontos para Retirada (Concluídos)
+                <span class="badge" id="countConcluidos">0</span>
+            </h2>
+            <div class="grid-pedidos" id="gridConcluidos">
+                <div class="sem-pedidos">Nenhum pedido finalizado ainda.</div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="historico-secao">
+        <button class="btn-toggle-historico" id="btnToggleHistorico">
+            Ver Pedidos de Ontem e Anteriores (<span id="countHistorico">0</span>) ▾
+        </button>
+        <div class="historico-conteudo escondido" id="historicoConteudo">
+            <div class="tabela-responsiva">
+                <table class="tabela-historico">
+                    <thead>
+                        <tr>
+                            <th>Senha</th>
+                            <th>Cliente</th>
+                            <th>Itens Pedidos</th>
+                            <th>Consumo</th>
+                            <th>Horário/Data</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaHistorico">
+                        <tr>
+                            <td colspan="5" class="sem-historico">Nenhum pedido antigo encontrado.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </footer>
+
+    <script src="cozinha-script.js"></script>
+</body>
+</html>
