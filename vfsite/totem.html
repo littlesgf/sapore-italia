@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sapore d'Italia - Totem de Autoatendimento</title>
+    <link rel="stylesheet" href="totem-style.css">
+
+</head>
+<body class="loading">
+
+    <header class="totem-header">
+        <div class="brand-container">
+            <img src="assets/garfo-2.png" alt="Logo Sapore d'Italia" class="restaurant-logo">
+            <div class="logo">Sapore d'Italia</div>
+        </div>
+        <p class="totem-instruction">Toque em um prato para adicionar ao seu pedido.</p>
+        <p class="clima-sugestao" id="climaSugestao"></p>
+    </header>
+
+    <nav class="category-tabs" id="categoryTabs">
+        <button class="tab-btn active" data-category="todos">Todos</button>
+        <button class="tab-btn" data-category="antipasti">
+            <img src="assets/entrada.png" alt=""> Entrada
+        </button>
+        <button class="tab-btn" data-category="massas">
+            <img src="assets/massa.png" alt=""> Massas
+        </button>
+        <button class="tab-btn" data-category="risotos">
+            <img src="assets/risoto.png" alt=""> Risotos
+        </button>
+        <button class="tab-btn" data-category="pizzas">
+            <img src="assets/pizza.png" alt=""> Pizzas
+        </button>
+        <button class="tab-btn" data-category="sobremesas">
+            <img src="assets/sobremesa.png" alt=""> Sobremesas
+        </button>
+        <button class="tab-btn" data-category="bebidas">
+            <img src="assets/vinho.png" alt=""> Vinhos e Bebidas
+        </button>
+    </nav>
+
+    <main class="totem-main">
+
+        <section class="menu-category" data-category="antipasti">
+            <h2>Entradas</h2>
+            <div class="dishes-grid">
+
+                <div class="menu-card" data-id="bruschetta" data-name="Bruschetta al Pomodoro" data-price="28.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Clássico</span>
+                        <img src="assets/brusqueta.png" alt="Bruschetta al Pomodoro">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Bruschetta al Pomodoro</h3>
+                            <span class="price">R$ 28,00</span>
+                        </div>
+                        <p class="card-description">Pão rústico tostado com tomates frescos marinados, manjericão, alho e azeite extravirgem.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="carpaccio" data-name="Carpaccio di Manzo" data-price="46.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Tradicional</span>
+                        <img src="assets/Carpaccio.png" alt="Carpaccio di Manzo">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Carpaccio di Manzo</h3>
+                            <span class="price">R$ 46,00</span>
+                        </div>
+                        <p class="card-description">Finas fatias de carne bovina crua, molho de mostarda e limão siciliano, parmesão e rúcula fresca.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="burrata" data-name="Burrata com Tomates Assados" data-price="54.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Da Casa</span>
+                        <img src="assets/Burrata.png" alt="Burrata com Tomates Assados">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Burrata com Tomates Assados</h3>
+                            <span class="price">R$ 54,00</span>
+                        </div>
+                        <p class="card-description">Burrata cremosa fresca sobre tomates assados lentamente, pesto de manjericão e crostini crocante.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="caprese" data-name="Insalata Caprese" data-price="38.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Fresco</span>
+                        <img src="assets/caprese.png" alt="Insalata Caprese">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Insalata Caprese</h3>
+                            <span class="price">R$ 38,00</span>
+                        </div>
+                        <p class="card-description">Camadas de mussarela de búfala e tomates maduros, manjericão fresco e azeite extravirgem.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="vitello-tonnato" data-name="Vitello Tonnato" data-price="49.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Piemontese</span>
+                        <img src="assets/vitello-tonnato.png" alt="Vitello Tonnato">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Vitello Tonnato</h3>
+                            <span class="price">R$ 49,00</span>
+                        </div>
+                        <p class="card-description">Finas fatias de vitela assada, molho cremoso de atum e alcaparras, toque de limão siciliano.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="menu-category" data-category="massas">
+            <h2>Massas</h2>
+            <div class="dishes-grid">
+
+                <div class="menu-card" data-id="lasagna" data-name="Lasagna Bolognese" data-price="68.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Clássico</span>
+                        <img src="assets/lasanha.png" alt="Lasagna Alla Bolognese">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Lasagna Bolognese</h3>
+                            <span class="price">R$ 68,00</span>
+                        </div>
+                        <p class="card-description">Massa artesanal com ragu de carne bovina, molho bechamel cremoso e queijo parmesão gratinado.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="carbonara" data-name="Spaghetti Carbonara" data-price="62.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Romana</span>
+                        <img src="assets/carbonara.png" alt="Spaghetti alla Carbonara">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Spaghetti Carbonara</h3>
+                            <span class="price">R$ 62,00</span>
+                        </div>
+                        <p class="card-description">Gemas frescas, queijo pecorino, pimenta-do-reino e guanciale bem crocante.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="gnocchi" data-name="Gnocchi ao Quatro Queijos" data-price="58.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Artesanal</span>
+                        <img src="assets/Gnocchi.png" alt="Gnocchi al Gorgonzola">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Gnocchi ao Quatro Queijos</h3>
+                            <span class="price">R$ 58,00</span>
+                        </div>
+                        <p class="card-description">Nhoque caseiro de batata com molho cremoso de gorgonzola, provolone, fontina e parmesão.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="ravioli" data-name="Ravioli de Ricota e Espinafre" data-price="65.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Caseiro</span>
+                        <img src="assets/ravioli.png" alt="Ravioli di Ricotta e Espinafre">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Ravioli de Ricota e Espinafre</h3>
+                            <span class="price">R$ 65,00</span>
+                        </div>
+                        <p class="card-description">Massa fresca recheada, servida em manteiga sálvia e lascas generosas de parmesão.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="ossobuco" data-name="Osso Buco alla Milanese" data-price="89.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Especialidade</span>
+                        <img src="assets/ossobuco.png" alt="Osso Buco alla Milanese">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Osso Buco alla Milanese</h3>
+                            <span class="price">R$ 89,00</span>
+                        </div>
+                        <p class="card-description">Jarrete bovino cozido lentamente em vinho branco, gremolata fresca sobre risoto de açafrão.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="fettuccine-alfredo" data-name="Fettuccine Alfredo" data-price="56.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Cremoso</span>
+                        <img src="assets/fettuccine-alfredo.png" alt="Fettuccine Alfredo">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Fettuccine Alfredo</h3>
+                            <span class="price">R$ 56,00</span>
+                        </div>
+                        <p class="card-description">Massa fresca envolvida em molho cremoso de manteiga e parmesão, finalizada com pimenta-do-reino.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="menu-category" data-category="risotos">
+            <h2>Risotos</h2>
+            <div class="dishes-grid">
+
+                <div class="menu-card" data-id="risotofunghi" data-name="Risotto ai Funghi" data-price="72.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Cremoso</span>
+                        <img src="assets/risoto1.png" alt="Risotto ai Funghi Porcini">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Risotto ai Funghi</h3>
+                            <span class="price">R$ 72,00</span>
+                        </div>
+                        <p class="card-description">Arroz arbóreo, manteiga, parmesão e cogumelos porcini salteados na manteiga com alho.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="risoto-milanese" data-name="Risotto alla Milanese" data-price="70.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Clássico</span>
+                        <img src="assets/risoto-milanese.png" alt="Risotto alla Milanese">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Risotto alla Milanese</h3>
+                            <span class="price">R$ 70,00</span>
+                        </div>
+                        <p class="card-description">Arroz arbóreo cozido lentamente em caldo de carne, açafrão e finalizado com parmesão.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="risoto-frutos-mar" data-name="Risotto ai Frutti di Mare" data-price="86.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Especialidade</span>
+                        <img src="assets/risoto-frutos-mar.png" alt="Risotto ai Frutti di Mare">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Risotto ai Frutti di Mare</h3>
+                            <span class="price">R$ 86,00</span>
+                        </div>
+                        <p class="card-description">Arroz arbóreo com camarões, mexilhões e lulas frescas, toque de vinho branco e ervas.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="menu-category" data-category="pizzas">
+            <h2>Pizzas</h2>
+            <div class="dishes-grid">
+
+                <div class="menu-card" data-id="margherita" data-name="Pizza Margherita" data-price="52.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Tradicional</span>
+                        <img src="assets/pizza-margherita.png" alt="Pizza Margherita">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Pizza Margherita</h3>
+                            <span class="price">R$ 52,00</span>
+                        </div>
+                        <p class="card-description">Molho de tomate San Marzano, mussarela de búfala, manjericão fresco e azeite extravirgem.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="quattro-formaggi" data-name="Pizza Quattro Formaggi" data-price="58.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Cremosa</span>
+                        <img src="assets/pizza-quattro-formaggi.png" alt="Pizza Quattro Formaggi">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Pizza Quattro Formaggi</h3>
+                            <span class="price">R$ 58,00</span>
+                        </div>
+                        <p class="card-description">Mussarela, gorgonzola, parmesão e provolone, finalizada com orégano fresco.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="pizza-diavola" data-name="Pizza Diavola" data-price="60.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Picante</span>
+                        <img src="assets/pizza-diavola.png" alt="Pizza Diavola">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Pizza Diavola</h3>
+                            <span class="price">R$ 60,00</span>
+                        </div>
+                        <p class="card-description">Molho de tomate, mussarela, calabresa picante italiana e pimenta calabresa fresca.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="pizza-quattro-stagioni" data-name="Pizza Quattro Stagioni" data-price="62.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Tradicional</span>
+                        <img src="assets/pizza-quattro-stagioni.png" alt="Pizza Quattro Stagioni">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Pizza Quattro Stagioni</h3>
+                            <span class="price">R$ 62,00</span>
+                        </div>
+                        <p class="card-description">Presunto, cogumelos frescos, alcachofras e azeitonas, dividida em quatro estações no mesmo disco.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="menu-category" data-category="sobremesas">
+            <h2>Sobremesas</h2>
+            <div class="dishes-grid">
+
+                <div class="menu-card" data-id="tiramisu" data-name="Tiramisù Tradicional" data-price="32.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Dolce Itália</span>
+                        <img src="assets/tiramisu.png" alt="Tiramisù Clássico">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Tiramisù Tradicional</h3>
+                            <span class="price">R$ 32,00</span>
+                        </div>
+                        <p class="card-description">Biscoitos champagne com café espresso e Amaretto, creme de mascarpone e cacau em pó.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="petit-gateau" data-name="Petit Gâteau Belga" data-price="28.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Mais Pedido</span>
+                        <img src="assets/peti.png" alt="Petit Gâteau de Chocolate">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Petit Gâteau Belga</h3>
+                            <span class="price">R$ 28,00</span>
+                        </div>
+                        <p class="card-description">Bolinho quente de chocolate belga com recheio cremoso e sorvete artesanal de baunilha.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="pannacotta" data-name="Panna Cotta de Frutas" data-price="26.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Refrescante</span>
+                        <img src="assets/bolo.png" alt="Panna Cotta com Frutas Vermelhas">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Panna Cotta de Frutas</h3>
+                            <span class="price">R$ 26,00</span>
+                        </div>
+                        <p class="card-description">Creme de leite fresco e fava de baunilha, calda artesanal ácida de frutas vermelhas.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="cannoli" data-name="Cannoli Siciliano" data-price="24.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Siciliano</span>
+                        <img src="assets/cannoli.png" alt="Cannoli Siciliano">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Cannoli Siciliano</h3>
+                            <span class="price">R$ 24,00</span>
+                        </div>
+                        <p class="card-description">Massa crocante recheada na hora com creme de ricota, raspas de laranja e chocolate amargo.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="affogato" data-name="Affogato al Caffè" data-price="22.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Clássico Italiano</span>
+                        <img src="assets/affogato.png" alt="Affogato al Caffè">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Affogato al Caffè</h3>
+                            <span class="price">R$ 22,00</span>
+                        </div>
+                        <p class="card-description">Sorvete artesanal de baunilha "afogado" em um shot de espresso quente, servido na hora.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="zabaione" data-name="Zabaione com Frutas Frescas" data-price="26.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Clássico Italiano</span>
+                        <img src="assets/Zabaione com Frutas Frescas.png" alt="Zabaione com Frutas Frescas">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Zabaione com Frutas Frescas</h3>
+                            <span class="price">R$ 26,00</span>
+                        </div>
+                        <p class="card-description">Creme italiano de gemas e vinho Marsala, servido morno sobre frutas vermelhas da estação.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="torta-della-nonna" data-name="Torta della Nonna" data-price="28.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Caseira</span>
+                        <img src="assets/torta-della-nonna.png" alt="Torta della Nonna">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Torta della Nonna</h3>
+                            <span class="price">R$ 28,00</span>
+                        </div>
+                        <p class="card-description">Torta de creme de baunilha em massa amanteigada, coberta com pinoli tostados e açúcar de confeiteiro.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="menu-category" data-category="bebidas">
+            <h2>Vinhos e Bebidas</h2>
+            <div class="dishes-grid">
+
+                <div class="menu-card" data-id="vinho-tinto" data-name="Taça de Vinho Tinto" data-price="24.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Corpo Médio</span>
+                        <img src="assets/vinho-tinto.png" alt="Taça de Vinho Tinto">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Taça de Vinho Tinto</h3>
+                            <span class="price">R$ 24,00</span>
+                        </div>
+                        <p class="card-description">Seleção italiana da casa, ideal para acompanhar massas e carnes vermelhas.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="vinho-branco" data-name="Taça de Vinho Branco" data-price="22.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Leve</span>
+                        <img src="assets/vinho-branco.png" alt="Taça de Vinho Branco">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Taça de Vinho Branco</h3>
+                            <span class="price">R$ 22,00</span>
+                        </div>
+                        <p class="card-description">Fresco e aromático, harmoniza bem com risotos e frutos do mar.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="agua" data-name="Água com Gás" data-price="8.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Gelada</span>
+                        <img src="assets/agua.png" alt="Água com Gás">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Água com Gás</h3>
+                            <span class="price">R$ 8,00</span>
+                        </div>
+                        <p class="card-description">Garrafa individual, servida bem gelada.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="espresso" data-name="Espresso Italiano" data-price="10.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Encorpado</span>
+                        <img src="assets/espresso.png" alt="Espresso Italiano">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Espresso Italiano</h3>
+                            <span class="price">R$ 10,00</span>
+                        </div>
+                        <p class="card-description">Café espresso tradicional, extraído na hora com blend italiano de torra escura.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="limoncello" data-name="Limoncello" data-price="18.00">
+                    <div class="card-image-wrapper">
+                        <span class="badge">Digestivo</span>
+                        <img src="assets/limoncello.png" alt="Limoncello">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-title-row">
+                            <h3>Limoncello</h3>
+                            <span class="price">R$ 18,00</span>
+                        </div>
+                        <p class="card-description">Licor italiano de limão gelado, servido em dose curta ao final da refeição.</p>
+                        <div class="card-action"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="totem-footer">
+        <p>&copy; 2026 Sapore d'Italia — Il Tradizionale. Todos os direitos reservados.</p>
+        <p class="totem-footer-sub">Em caso de dúvidas, chame um de nossos atendentes.</p>
+    </footer>
+
+    <!-- Barra de carrinho fixa -->
+    <button class="cart-bar" id="cartBar">
+        <span class="cart-bar-count" id="cartCount">0</span>
+        <span class="cart-bar-label">itens no pedido</span>
+        <span class="cart-bar-total" id="cartTotal">R$ 0,00</span>
+        <span class="cart-bar-cta">Ver Pedido <i class="fas fa-arrow-right"></i></span>
+    </button>
+
+    <!-- Painel do carrinho -->
+    <div class="cart-overlay" id="cartOverlay">
+        <div class="cart-panel">
+            <div class="cart-panel-header">
+                <h2>Seu Pedido</h2>
+                <button class="cart-close" id="cartClose" aria-label="Fechar">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <p class="cart-empty">Seu carrinho está vazio. Toque em um prato para começar.</p>
+            </div>
+            <div class="cart-panel-footer">
+                <div class="cart-summary-row">
+                    <span>Total</span>
+                    <span id="cartPanelTotal">R$ 0,00</span>
+                </div>
+                <button class="btn-checkout" id="checkoutBtn">Finalizar Pedido</button>
+                <button class="btn-continue" id="continueBtn">Continuar Escolhendo</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tela de confirmação -->
+    <div class="confirm-overlay" id="confirmOverlay">
+        <div class="confirm-panel">
+            <div class="confirm-icon"><i class="fas fa-check"></i></div>
+            <h2>Pedido Enviado!</h2>
+            <p>Retire sua senha e aguarde ser chamado no balcão.</p>
+            <p class="confirm-number">Senha <strong id="orderNumber">--</strong></p>
+            <button class="btn-checkout" id="newOrderBtn">Fazer Novo Pedido</button>
+        </div>
+    </div>
+
+    <script src="totem-script.js"></script>
+    <script src="totem-addon.js"></script>
+</body>
+</html>

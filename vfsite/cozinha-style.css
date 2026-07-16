@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #faf8f5; /* Off-white clássico do Totem */
+    color: #2c1a0c; /* Marrom escuro */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e6dfd8;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    color: #5c2121; /* Bordô principal */
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+}
+
+.subtitulo-header {
+    color: #706254; 
+    font-size: 0.95rem; 
+    margin-top: 4px;
+}
+
+.status-indicator {
+    background-color: #2f7d4a; /* Verde sucesso */
+    color: #ffffff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
+/* Container Principal com Divisão em Duas Colunas */
+.painel-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Coluna de pendentes maior */
+    gap: 30px;
+    flex-grow: 1;
+}
+
+.coluna {
+    display: flex;
+    flex-direction: column;
+}
+
+.coluna-titulo {
+    font-family: 'Georgia', serif;
+    font-size: 1.4rem;
+    color: #5c2121;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #c48c46; /* Dourado */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.coluna-titulo span.badge {
+    background-color: #5c2121;
+    color: white;
+    font-size: 0.9rem;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-family: sans-serif;
+}
+
+/* Estilo para a coluna de concluídos */
+.coluna.concluidos .coluna-titulo {
+    color: #706254;
+    border-bottom-color: #e6dfd8;
+}
+
+.coluna.concluidos .coluna-titulo span.badge {
+    background-color: #706254;
+}
+
+/* Grid de Cards dos Pedidos */
+.grid-pedidos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card-pedido {
+    background-color: #ffffff;
+    border: 1px solid #e6dfd8;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(44, 26, 12, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Cabeçalhos */
+.card-header {
+    background-color: #5c2121; /* Bordô */
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+}
+
+.card-header.viagem {
+    background-color: #2c1a0c; /* Marrom Escuro */
+    border-bottom: 3px solid #c48c46;
+}
+
+/* Cabeçalho do Concluído fica opaco/cinza */
+.card-pedido.finalizado {
+    opacity: 0.75;
+    border-color: #e6dfd8;
+}
+
+.card-pedido.finalizado .card-header {
+    background-color: #706254 !important;
+    border-bottom: none;
+}
+
+.senha-pedido {
+    font-family: 'Georgia', serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.card-header.viagem .senha-pedido {
+    color: #c48c46;
+}
+
+.tipo-consumo {
+    font-size: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #fdfcfb;
+}
+
+.cliente-info {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #5c2121;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #e6dfd8;
+    padding-bottom: 8px;
+}
+
+.card-pedido.finalizado .cliente-info {
+    color: #706254;
+}
+
+.itens-lista {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.itens-lista li {
+    font-size: 1.05rem;
+    color: #2c1a0c;
+    padding: 6px 0;
+    border-bottom: 1px solid #f2eee9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-pedido.finalizado .itens-lista li {
+    color: #706254;
+    text-decoration: line-through; /* Risca itens entregues */
+}
+
+.qtd-item {
+    font-weight: bold;
+    color: #c48c46;
+    font-size: 1.15rem;
+    margin-right: 10px;
+}
+
+.card-pedido.finalizado .qtd-item {
+    color: #8c7e70;
+}
+
+.tempo-espera {
+    font-size: 0.8rem;
+    color: #706254;
+    margin-top: auto;
+    text-align: right;
+}
+
+/* Botão de Conclusão */
+.btn-concluir {
+    width: 100%;
+    background-color: #c48c46; /* Dourado */
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-concluir:hover {
+    background-color: #a97535;
+}
+
+.sem-pedidos {
+    text-align: center;
+    padding: 40px;
+    color: #706254;
+    font-size: 1.1rem;
+    font-style: italic;
+    grid-column: 1 / -1;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 900px) {
+    .painel-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* ==========================================================================
+   PAINEL DE HISTÓRICO (Ocultável no rodapé)
+   ========================================================================== */
+.historico-secao {
+    margin-top: 40px;
+    border-top: 2px solid #e6dfd8;
+    padding-top: 15px;
+}
+
+.btn-toggle-historico {
+    width: 100%;
+    background-color: #706254; /* Cor cinza-marrom neutra do totem */
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-toggle-historico:hover {
+    background-color: #5c4f42;
+}
+
+.historico-conteudo {
+    margin-top: 15px;
+    background-color: #ffffff;
+    border: 1px solid #e6dfd8;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+}
+
+/* Classe utilitária para esconder */
+.escondido {
+    display: none;
+}
+
+.tabela-responsiva {
+    overflow-x: auto;
+}
+
+.tabela-historico {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.tabela-historico th, 
+.tabela-historico td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f2eee9;
+}
+
+.tabela-historico th {
+    background-color: #fcfbfa;
+    color: #5c2121;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+}
+
+.tabela-historico td {
+    color: #706254;
+}
+
+/* Destaque sutil para a senha no histórico */
+.historico-senha {
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    color: #2c1a0c;
+}
+
+.sem-historico {
+    text-align: center;
+    color: #a89d91;
+    font-style: italic;
+    padding: 20px 0;
+}
