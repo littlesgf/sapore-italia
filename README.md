@@ -67,6 +67,15 @@ Two tables:
 
 This project was developed for the *Advanced Web Programming* course, fulfilling the requirements of integrating HTML5, CSS3, JavaScript, PHP, a MySQL database, and a public API into a working, hosted web application.
 
+## Contributors
+
+- José Henrique — JavaScript.
+- Mikael Cunha — Database and project hosting.
+- Patrícia — HTML.
+- Sara Geovana — PHP, database, HTML, and project hosting.
+- Sarah dos Reis  — HTML and API integration.
+- Weslley Felipe — CSS.
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Sapore d'Italia — Totem de Autoatendimento
@@ -137,3 +146,12 @@ Duas tabelas:
 ## Contexto acadêmico
 
 Este projeto foi desenvolvido para a disciplina de *Programação Avançada de Computadores*, atendendo aos requisitos de integração entre HTML5, CSS3, JavaScript, PHP, banco de dados MySQL e uma API pública em uma aplicação web funcional e hospedada.
+
+## Colaboradores
+
+- José Henrique — JavaScript.
+- Mikael Cunha — Banco de dados e hospedagem do projeto.
+- Patrícia — HTML.
+- Sara Geovana — PHP, banco de dados, HTML e hospedagem do projeto.
+- Sarah dos Reis — HTML e integração da API.
+- Weslley Felipe — CSS.
