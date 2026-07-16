@@ -71,7 +71,7 @@ This project was developed for the *Advanced Web Programming* course, fulfilling
 
 - José Henrique — JavaScript.
 - Mikael Cunha — Database and project hosting.
-- Patrícia — HTML.
+- Patrícia Mariane — HTML.
 - Sara Geovana — PHP, database, HTML, and project hosting.
 - Sarah dos Reis  — HTML and API integration.
 - Weslley Felipe — CSS.
@@ -151,7 +151,7 @@ Este projeto foi desenvolvido para a disciplina de *Programação Avançada de C
 
 - José Henrique — JavaScript.
 - Mikael Cunha — Banco de dados e hospedagem do projeto.
-- Patrícia — HTML.
+- Patrícia Mariane — HTML.
 - Sara Geovana — PHP, banco de dados, HTML e hospedagem do projeto.
 - Sarah dos Reis — HTML e integração da API.
 - Weslley Felipe — CSS.
